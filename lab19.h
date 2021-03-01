@@ -35,7 +35,7 @@ void Unit::create(string t){
 		def = rand()%3+9;
 	}else if(t == "Monster"){
 		type = "Monster";
-		name = "Monster";
+		name = "Kraken";
 		hpmax = rand()%20+200;
 		atk = rand()%5+25;
 		def = rand()%3+5;
@@ -53,7 +53,7 @@ void Unit::showStatus(){
 	}	
 	else if(type == "Monster"){
 		cout << "\t\t\t\t---------------------------------------\n"; 
-		cout << "\t\t\t\tMonster" << "\n"; 
+		cout << "\t\t\t\t" << name << "\n"; 
 		cout << "\t\t\t\tHP: " << hp << "\t\tATK: "<< atk << "\t\tDEF: "<< def;
 		cout << "\n\t\t\t\t---------------------------------------\n";
 	}
@@ -63,13 +63,13 @@ void Unit::newTurn(){
 	guard_on = false;
 }
 
-//Write Function Member attack(), beAttacked(), heal(), guard() and isDead() here
-//
-//
-//
-//
-//
-//
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+//Write function members isDead(), guard(), heal(), beAttacked(), and attack() here//
+/////////////////////////////////////////////////////////////////////////////////////
+
+
 
 void drawScene(char p_action,int p,char m_action,int m){
 	cout << "                                                       \n";
@@ -124,4 +124,3 @@ void playerLose(){
 	cout << "*                                                     *\n";
 	cout << "*******************************************************\n";
 };
-
